@@ -2,22 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d163cc67-6f86-4c91-804f-46cfe39e2583" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/imager/domain/Correlators/CollectionOfCorrelationParams.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/imager/domain/Correlators/CorrelatorForTwoPointClouds.class" afterPath="$PROJECT_DIR$/target/classes/imager/domain/Correlators/CorrelatorForTwoPointClouds.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/imager/domain/ThreeDObjects/FloatColoredPVector.class" afterPath="$PROJECT_DIR$/target/classes/imager/domain/ThreeDObjects/FloatColoredPVector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/junit/ThreeDObjects/FloatColoredPVectorTest2.class" afterPath="$PROJECT_DIR$/target/test-classes/junit/ThreeDObjects/FloatColoredPVectorTest2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/junit/ThreeDObjects/FloatColoredPVectorTestRotations.class" afterPath="$PROJECT_DIR$/target/test-classes/junit/ThreeDObjects/FloatColoredPVectorTestRotations.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/imager/domain/Transforms/SeriesOfTransforms.class" afterPath="$PROJECT_DIR$/target/classes/imager/domain/Transforms/SeriesOfTransforms.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/imager/domain/Correlators/CorrelatorForTwoPointClouds.java" afterPath="$PROJECT_DIR$/src/main/java/imager/domain/Correlators/CorrelatorForTwoPointClouds.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/imager/domain/ThreeDObjects/FloatColoredPVector.java" afterPath="$PROJECT_DIR$/src/main/java/imager/domain/ThreeDObjects/FloatColoredPVector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/junit/ThreeDObjects/FloatColoredPVectorTest2.java" afterPath="$PROJECT_DIR$/src/test/java/junit/ThreeDObjects/FloatColoredPVectorTest2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/junit/ThreeDObjects/FloatColoredPVectorTestRotations.java" afterPath="$PROJECT_DIR$/src/test/java/junit/ThreeDObjects/FloatColoredPVectorTestRotations.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cucumber_features_and_stepdefs/FloatColoredPVectorTestRotations_WithAndWithoutArrays_CucumberStepDefs.java" afterPath="$PROJECT_DIR$/src/test/java/cucumber_features_and_stepdefs/FloatColoredPVectorTestRotations_WithAndWithoutArrays_CucumberStepDefs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/cucumber_features_and_stepdefs/RotationUsingOriginalMethods.feature" afterPath="$PROJECT_DIR$/src/test/resources/cucumber_features_and_stepdefs/RotationUsingOriginalMethods.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cucumber_features_and_stepdefs/RotationUsingOriginalMethods.feature" afterPath="$PROJECT_DIR$/target/test-classes/cucumber_features_and_stepdefs/RotationUsingOriginalMethods.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/imager/domain/Transforms/SeriesOfTransforms.java" afterPath="$PROJECT_DIR$/src/main/java/imager/domain/Transforms/SeriesOfTransforms.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/cucumber-report.json" afterPath="$PROJECT_DIR$/target/cucumber-report.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/infinitest.filters" afterPath="$PROJECT_DIR$/infinitest.filters" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RomanNumbersMaven.iws" />
@@ -66,8 +50,8 @@
           <file leaf-file-name="SeriesOfTransforms.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/imager/domain/Transforms/SeriesOfTransforms.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.44923505">
-                  <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+                <state vertical-scroll-proportion="0.4798331">
+                  <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -171,7 +155,6 @@
         <option value="$PROJECT_DIR$/src/main/java/imager/domain/Transforms/Identity.java" />
         <option value="$PROJECT_DIR$/src/main/java/imager/domain/Transforms/Matrix4by4.java" />
         <option value="$PROJECT_DIR$/src/main/java/imager/domain/Transforms/Fast4by4Matrix.java" />
-        <option value="$PROJECT_DIR$/src/main/java/imager/domain/Transforms/SeriesOfTransforms.java" />
         <option value="$PROJECT_DIR$/src/test/resources/cucumber_features_and_stepdefs/RotationUsingArrays.feature" />
         <option value="$PROJECT_DIR$/src/test/java/junit/Transforms/TestRotation.java" />
         <option value="$PROJECT_DIR$/src/test/java/junit/Correlators/PerformanceTestCorrelator.java" />
@@ -193,6 +176,7 @@
         <option value="$PROJECT_DIR$/src/main/java/imager/domain/Correlators/CorrelatorForTwoPointClouds.java" />
         <option value="$PROJECT_DIR$/src/main/java/imager/domain/Correlators/CollectionOfCorrelationParams.java" />
         <option value="$PROJECT_DIR$/src/test/java/cucumber_features_and_stepdefs/FloatColoredPVectorTestRotations_WithAndWithoutArrays_CucumberStepDefs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/imager/domain/Transforms/SeriesOfTransforms.java" />
       </list>
     </option>
   </component>
@@ -956,7 +940,13 @@
       <option name="project" value="LOCAL" />
       <updated>1442156926391</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="switched rotates to use matrices">
+      <created>1442170622086</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1442170622086</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1015,7 +1005,8 @@
     <MESSAGE value="message" />
     <MESSAGE value="more changes&#10;" />
     <MESSAGE value="testing infinitest" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing infinitest" />
+    <MESSAGE value="switched rotates to use matrices" />
+    <option name="LAST_COMMIT_MESSAGE" value="switched rotates to use matrices" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1431,8 +1422,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/imager/domain/Transforms/SeriesOfTransforms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44923505">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.4798331">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>
