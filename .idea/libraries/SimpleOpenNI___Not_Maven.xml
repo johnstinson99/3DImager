@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="SimpleOpenNI - Not Maven">
+    <CLASSES>
+      <root url="file://$USER_HOME$/IdeaProjects/Libraries/SimpleOpenNI-1.96/SimpleOpenNI/library" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$USER_HOME$/IdeaProjects/Libraries/SimpleOpenNI-1.96/SimpleOpenNI/documentation" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://$USER_HOME$/IdeaProjects/Libraries/SimpleOpenNI-1.96/SimpleOpenNI/library" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$USER_HOME$/IdeaProjects/Libraries/SimpleOpenNI-1.96/SimpleOpenNI/examples/eclipse" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/IdeaProjects/Libraries/SimpleOpenNI-1.96/SimpleOpenNI/library" recursive="false" />
+  </library>
+</component>
