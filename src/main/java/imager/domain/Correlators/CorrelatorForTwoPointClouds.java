@@ -294,6 +294,7 @@ public abstract class CorrelatorForTwoPointClouds {
     //comment to test git deleteme
     //2nd comment
     //3rd comment
+    //Master comment
     public void setCloud1ExtentsAndZPointPlanes() {
         setUpZPointPlanes();    //changes on rotate
         //setupOverlapIntRect();
