@@ -290,6 +290,7 @@ public abstract class CorrelatorForTwoPointClouds {
         //setCloud0Extents();  //These are now set on setup of Cloud0.
         setCloud1ExtentsAndZPointPlanes(); //(false, 0,'intX');
     }
+//new comment with more words
 
 
     public void setCloud1ExtentsAndZPointPlanes() {
