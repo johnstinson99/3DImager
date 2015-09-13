@@ -10,21 +10,21 @@ import java.util.ArrayList;
  * Created by John on 03/09/2015.
  */
 public class SeriesOfTransforms {
-    ArrayList<EuclidianTransform> euclidianTransformList;
+    ArrayList<EuclidianTransform> transformList;
     Logger myLogger;
 
     public SeriesOfTransforms(){
-        euclidianTransformList = new ArrayList<EuclidianTransform>();
+        transformList = new ArrayList<EuclidianTransform>();
         myLogger = LoggerFactory.getLogger(this.getClass());
     }
 
-    public void add(EuclidianTransform myEuclidianTransform){
-        euclidianTransformList.add(myEuclidianTransform);
+    public void add(EuclidianTransform myTransform){
+        transformList.add(myTransform);
     }
     public void applyTo(FloatColoredPVector myColoredPVector){
-        for(EuclidianTransform myEuclidianTransform : euclidianTransformList){
-            System.out.println("Applying transform\n"+myEuclidianTransform);
-            myEuclidianTransform.applyTransformTo(myColoredPVector);
+        for(EuclidianTransform myTransform : transformList){
+            System.out.println("Applying transform\n"+ myTransform);
+            myTransform.applyTransformTo(myColoredPVector);
         }
     }
     public EuclidianTransform getCombinedTransform(){
@@ -38,7 +38,7 @@ public class SeriesOfTransforms {
         EuclidianTransform transform = new Identity();
         transform.setTransformDescription("Combined transformation made up of: "+ transform.getTransformDescription());
         //System.out.println("transform = "+ transform);
-        for(EuclidianTransform nextTransform: euclidianTransformList){
+        for(EuclidianTransform nextTransform: transformList){
             //TODO ADD THIS BACK!!!
             nextTransform.applyTransformTo(transform);
             transform.setTransformDescription(transform.getTransformDescription() + "\nFollowed by: " + nextTransform.getTransformDescription());
@@ -50,7 +50,7 @@ public class SeriesOfTransforms {
 
     public String toString(){
         String returnString = "Un-combined list of transforms containing:\n";
-        for(EuclidianTransform myTransform: euclidianTransformList){
+        for(EuclidianTransform myTransform: transformList){
             returnString += myTransform;
         }
         returnString += "End of list";

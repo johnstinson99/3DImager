@@ -47,15 +47,15 @@ public class FloatColoredPVectorTestRotations extends TestCase {
     public final void testRotateDegrees_Y(){
         //Happy path cases
         assertTrue(new FloatColoredPVector(10,10,10).rotateDegrees(0f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(10, 10, 10)));
-        assertTrue(new FloatColoredPVector(10,10,10).rotateDegrees(90f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(-10, 10, 10)));
+        assertTrue(new FloatColoredPVector(10,10,10).rotateDegrees(90f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(10, 10, -10)));
         assertTrue(new FloatColoredPVector(10,10,10).rotateDegrees(180f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(-10, 10, -10)));
-        assertTrue(new FloatColoredPVector(10,10,10).rotateDegrees(270f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(10, 10, -10)));
+        assertTrue(new FloatColoredPVector(10,10,10).rotateDegrees(270f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(-10, 10, 10)));
         assertTrue(new FloatColoredPVector(10,10,10).rotateDegrees(360f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(10, 10, 10)));
 
         //Boundary conditions for zeros in input
-        assertTrue(new FloatColoredPVector(0, 10, 10).rotateDegrees(90f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(-10, 10, 0)));
-        assertTrue(new FloatColoredPVector(10,0,10).rotateDegrees(90f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(-10,0,10)));
-        assertTrue(new FloatColoredPVector(10,10,0).rotateDegrees(90f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(0,10,10)));
+        assertTrue(new FloatColoredPVector(0, 10, 10).rotateDegrees(90f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(10, 10, 0)));
+        assertTrue(new FloatColoredPVector(10,0,10).rotateDegrees(90f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(10,0,-10)));
+        assertTrue(new FloatColoredPVector(10,10,0).rotateDegrees(90f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(0,10,-10)));
         assertTrue(new FloatColoredPVector(0,0,0).rotateDegrees(90f, 'y').roughlyEqualsPositionOfPVector(new FloatColoredPVector(0,0,0)));
     }
 

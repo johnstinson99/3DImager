@@ -1,6 +1,7 @@
 package imager.domain.ThreeDObjects;
 
 import imager.domain.ThreeDImageCreator;
+import imager.domain.Transforms.Rotation;
 import processing.core.*;
 
 
@@ -75,7 +76,6 @@ public class FloatColoredPVector extends PVector {
     public float getBrightness() {
         return brightness;
     }
-
     private void setHSB(int myColor){
         //It should be more efficient to calculate these once here on setup, rather than calculating them from color each time they're needed.
         //Calclation of HSB was surprisingly to me taking 20-30% of the time in the correlation process.
@@ -83,7 +83,6 @@ public class FloatColoredPVector extends PVector {
         saturation = parentThreeDImageCreator.saturation(myColor);
         brightness = parentThreeDImageCreator.brightness(myColor);
     }
-
     public FloatColoredPVector createCopy()  {
         FloatColoredPVector newFloatColoredPVector = new FloatColoredPVector(parentThreeDImageCreator, this);
         newFloatColoredPVector.color = this.color;
@@ -93,20 +92,21 @@ public class FloatColoredPVector extends PVector {
         newFloatColoredPVector.brightness = this.brightness;
         return newFloatColoredPVector;
     }
-
-    /*public void drawIt() {
-    }*/
-
     public String toString() {
         return (x + ", " + y + ", " + z + "\n");
     }
-
     public FloatColoredPVector rotateDegrees(float betaDegrees, char myAxis){
         rotate3dRadians(PApplet.radians(betaDegrees), myAxis);
         return this;
     }
 
     public FloatColoredPVector rotate3dRadians(float beta, char myAxis){
+        Rotation myRotation = new Rotation(beta, myAxis);
+        myRotation.applyTransformTo(this);
+        return this;
+    }
+
+    public FloatColoredPVector rotate3dRadiansOld(float beta, char myAxis){
         float alpha;
         float r;
         float theta;
@@ -151,7 +151,7 @@ public class FloatColoredPVector extends PVector {
 
                 break;
             case 'z':  //easiest case
-                if(x ==0)x = 0.00000001f;;
+                if(x ==0)x = 0.00000001f;
 
                 alpha = PApplet.atan(y/x);
                 if (x < 0) {

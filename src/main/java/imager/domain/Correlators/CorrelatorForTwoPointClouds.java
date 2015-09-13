@@ -50,7 +50,7 @@ public abstract class CorrelatorForTwoPointClouds {
     int slideZMatrixPointIncrement;
     IntPVector3D slidePositionsEachSideIntPVector3D = new IntPVector3D(0,0,0);
     char rotateAxis;
-    int defaultMinScoreForGoodMatch;  //not really used
+    //int defaultMinScoreForGoodMatch;  //not really used
     float minScoreForGoodMatch;
     boolean correlateColors;
     long correlationStartTime;
@@ -191,13 +191,13 @@ public abstract class CorrelatorForTwoPointClouds {
         return rotateAxis;
     }
 
-    public int getDefaultMinScoreForGoodMatch() {
+   /*public int getDefaultMinScoreForGoodMatch() {
         return defaultMinScoreForGoodMatch;
-    }
+    }*/
 
-    public float getMinScoreForGoodMatch() {
+    /*public float getMinScoreForGoodMatch() {
         return minScoreForGoodMatch;
-    }
+    }*/
 
     public boolean isCorrelateColors() {
         return correlateColors;
@@ -268,15 +268,8 @@ public abstract class CorrelatorForTwoPointClouds {
     public void startCorrelate(boolean thisIsTheLastOne, String complexity){
         //TODO - input params aren't used in this method. Clean up?
         //Set up a collection of setup objects containing these parameters. Loop through the collection.
-        myCorrelatorZInputParamsArrayList = new ArrayList<CorrelatorZInputParams>();
-       // myCorrelatorZInputParamsArrayList.add(new CorrelatorZInputParams(new PVector(10f, 10f, 10f), new IntPVector3D(1,1,4), 'y', 10f, 1, 3, defaultMinScoreForGoodMatch, true)); //int mySlideZMatrixPointIncrement, int mySlidePositionsEachSide, char myRotateAxis, float myRotateAngleIncrement, int myRotateAnglePositionsLeft, int myRotateAnglePositionsTotal, float myMinScoreForGoodMatch, boolean myCorrelateColors
-        //Params are (PVector myZPointSizePVector, IntPVector3D mySlidePositionsEachSideIntPVector3D, char myRotateAxis, float myRotateAngleIncrementDegrees, int myRotateAnglePositionsLeft, int myRotateAnglePositionsTotal, float myMinScoreForGoodMatch, boolean myCorrelateColors){
-        myCorrelatorZInputParamsArrayList.add(new CorrelatorZInputParams(new PVector(10f, 10f, 3f), new IntPVector3D(3,3,3), 'y', 10f, 9, 19, defaultMinScoreForGoodMatch, true)); //int mySlideZMatrixPointIncrement, int mySlidePositionsEachSide, char myRotateAxis, float myRotateAngleIncrement, int myRotateAnglePositionsLeft, int myRotateAnglePositionsTotal, float myMinScoreForGoodMatch, boolean myCorrelateColors
-        myCorrelatorZInputParamsArrayList.add(new CorrelatorZInputParams(new PVector(8f, 8f, 3f), new IntPVector3D(3,3,3), 'y', 5f, 1, 3, defaultMinScoreForGoodMatch, true)); //int mySlideZMatrixPointIncrement, int mySlidePositionsEachSide, char myRotateAxis, float myRotateAngleIncrement, int myRotateAnglePositionsLeft, int myRotateAnglePositionsTotal, float myMinScoreForGoodMatch, boolean myCorrelateColors
-        myCorrelatorZInputParamsArrayList.add(new CorrelatorZInputParams(new PVector(5f, 5f, 2f), new IntPVector3D(1,1,2), 'y', 2f, 2, 3, defaultMinScoreForGoodMatch, true)); //int mySlideZMatrixPointIncrement, int mySlidePositionsEachSide, char myRotateAxis, float myRotateAngleIncrement, int myRotateAnglePositionsLeft, int myRotateAnglePositionsTotal, float myMinScoreForGoodMatch, boolean myCorrelateColors
-        myCorrelatorZInputParamsArrayList.add(new CorrelatorZInputParams(new PVector(3f, 3f, 2f), new IntPVector3D(1,1,2), 'y', 1f, 1, 3, defaultMinScoreForGoodMatch, true)); //int mySlideZMatrixPointIncrement, int mySlidePositionsEachSide, char myRotateAxis, float myRotateAngleIncrement, int myRotateAnglePositionsLeft, int myRotateAnglePositionsTotal, float myMinScoreForGoodMatch, boolean myCorrelateColors
-        //myCorrelatorZInputParamsArrayList.add(new CorrelatorZInputParams(new PVector(2f, 2f, 2f), new IntPVector3D(1,1,2), 'y', 0.5f, 1, 3, defaultMinScoreForGoodMatch, true)); //int mySlideZMatrixPointIncrement, int mySlidePositionsEachSide, char myRotateAxis, float myRotateAngleIncrement, int myRotateAnglePositionsLeft, int myRotateAnglePositionsTotal, float myMinScoreForGoodMatch, boolean myCorrelateColors
-       // myCorrelatorZInputParamsArrayList.add(new CorrelatorZInputParams(new PVector(1.5f, 1.5f, 1f), new IntPVector3D(1,1,2), 'y', 0.3f, 1, 3, defaultMinScoreForGoodMatch, true)); //int mySlideZMatrixPointIncrement, int mySlidePositionsEachSide, char myRotateAxis, float myRotateAngleIncrement, int myRotateAnglePositionsLeft, int myRotateAnglePositionsTotal, float myMinScoreForGoodMatch, boolean myCorrelateColors
+
+        myCorrelatorZInputParamsArrayList = CollectionOfCorrelationParams.getCollection();
         this.setUpInputParamsVariables();  //Sets up totalCorrelationsToRunForThisPair and  currentCorrelationNumberForThisPair;
         prepareForNextSetOfCorrelations();
     }
